@@ -8,7 +8,7 @@ class:
 
 # Comunidade
 
-![bg cover brightness:0.6](images/image-01.jpg)
+![bg cover brightness:0.6](images/image-01-alt.jpg)
 
 ---
 
