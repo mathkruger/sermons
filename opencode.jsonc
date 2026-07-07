@@ -1,0 +1,36 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "playwright": {
+      "type": "local",
+      "command": [
+        "npx",
+        "@playwright/mcp@latest"
+      ],
+      "enabled": true
+    },
+    "duckduckgo": {
+      "type": "local",
+      "command": [
+        "npx",
+        "-y",
+        "@spences10/mcp-duckduckgo-search@latest"
+      ],
+      "enabled": true
+    },
+    "unsplash": {
+      "type": "local",
+      "command": [
+        "npx",
+        "-y",
+        "@jeff_kit/unsplash-mcp-server",
+        "--response-format",
+        "text"
+      ],
+      "env": {
+        "UNSPLASH_ACCESS_KEY": "${UNSPLASH_ACCESS_KEY}"
+      },
+      "enabled": true
+    }
+  }
+}
