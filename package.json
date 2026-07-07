@@ -1,0 +1,24 @@
+{
+  "name": "sermons",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "./build.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mathkruger/sermons.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/mathkruger/sermons/issues"
+  },
+  "homepage": "https://github.com/mathkruger/sermons#readme",
+  "dependencies": {
+    "@marp-team/marp-cli": "^4.4.1"
+  }
+}
