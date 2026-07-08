@@ -35,7 +35,7 @@ Sempre use a ferramenta `websearch` (nativa) ou o MCP `duckduckgo` para pesquisa
 
 ### 4. Desenvolvimento (3-4 pontos principais)
 - Cada ponto com base bíblica sólida
-- Citações de Ellen G. White quando apropriado
+- Citações de Ellen G. White quando apropriado (sempre pergunte ao usuário antes de incluir)
 - Conexão com o caráter de Deus (tema central da teologia adventista - o Grande Conflito)
 - Aplicação prática
 
@@ -101,9 +101,11 @@ Chame `export_slide` com `format: "html"` e `allowLocalFiles: true`.
 - Todo conteúdo deve estar alinhado com a teologia adventista do sétimo dia
 - Verifique citações bíblicas - use traduções em português (ARA, NVT, NVI)
 - Mantenha cada slide conciso - uma ideia principal por slide
-- Use imagens de fundo do Unsplash que reflitam o tema (natureza, bíblia, igreja, etc.)
+- Use imagens de fundo do Unsplash que reflitam o tema (natureza, bíblia, igreja, etc.), sem filtros ou ajustes customizados
 - Crie o diretório `src/<sermao>/images/` e baixe as imagens do Unsplash lá
 - Sempre inclua o texto bíblico com referência
 - Use linguagem clara e acessível
 - Termine com um apelo ou desafio prático
 - Siga a estrutura de pastas existente: `src/<sermao>/index.md`
+- **Slides sem estilos customizados**: Use apenas as classes nativas `lead` e `invert` do tema gaia (`_class: lead` ou `_class: invert`). Não adicione estilos CSS customizados, `style` tags, ou classes não padrão. Imagens de fundo são permitidas (`![bg]`), mas sem ajustes de brilho, filtros ou estilos extras.
+- **Citações de Ellen G. White**: Antes de incluir qualquer citação de Ellen White, **pergunte ao usuário** se pode adicioná-la. Apresente a citação com livro, número da página e, de preferência, o link da fonte (ex: egwwritings.org ou centrowhite.org.br). Só insira a citação após confirmação explícita do usuário.
