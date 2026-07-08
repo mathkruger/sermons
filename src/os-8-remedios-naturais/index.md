@@ -28,9 +28,9 @@ O Primeiro dos 8 Remédios Naturais
 
 ![bg cover brightness:0.5](images/image-02.jpg)
 
-> "E disse Deus: Haja luz. E houve luz." — Gênesis 1:3
+> E disse Deus: Haja luz. E houve luz. — Gênesis 1:3
 
-> "Mas para vós, os que temeis o Meu nome, nascerá o Sol da Justiça, trazendo cura nas Suas asas." — Malaquias 4:2
+> Mas para vós, os que temeis o Meu nome, nascerá o Sol da Justiça, trazendo cura nas Suas asas. — Malaquias 4:2
 
 ---
 
@@ -82,8 +82,8 @@ O Primeiro dos 8 Remédios Naturais
 
 ## A Luz e a Saúde Integral
 
-> "A natureza é o médico de Deus. O ar puro, a radiosa luz solar, as flores e árvores, os pomares e vinhas e o exercício ao ar livre nessa atmosfera são salutares e vivificantes."
-> — Ellen G. White, *A Ciência do Bom Viver*, p. 264
+> A natureza é o médico de Deus. O ar puro, a radiosa luz solar, as flores e árvores, os pomares e vinhas e o exercício ao ar livre nessa atmosfera são salutares e vivificantes.
+> — Ellen G. White, A Ciência do Bom Viver, p. 264
 >
 > [Fonte: egwwritings.org](https://ellenwhite.cpb.com.br/livro/index/31/261/270/em-contato-com-a-natureza)
 
@@ -133,6 +133,6 @@ O Primeiro dos 8 Remédios Naturais
 - Ele nos chama a viver na **luz**, não nas trevas
 - "Já é hora de despertardes do sono... a noite é passada, e o dia é chegado" (Rm 13:11-12)
 
-> **Em breve, na Nova Jerusalém, "a cidade não precisa do sol, nem da lua, para lhe darem luz, pois a glória de Deus a iluminou" (Ap 21:23).**
+> **Em breve, na Nova Jerusalém, a cidade não precisa do sol, nem da lua, para lhe darem luz, pois a glória de Deus a iluminou (Ap 21:23).**
 
 ### Até lá, sejamos filhos da luz!
