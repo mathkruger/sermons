@@ -128,9 +128,7 @@ Tudo o que Jesus disse na cruz pode ser considerado como seu último sermão. Ca
 
 - Última palavra — e é uma **oração de confiança total**
 - Jesus entrega Seu espírito ao Pai — não à morte, não ao diabo
-- Volta à origem: nasceu do Pai, volta ao Pai
-- A entrega não é rendição — é **retorno vitorioso**
-- O filho prodígo celeste retornando ao lar celestial
+- A entrega não é rendição — é **vitória**
 
 **Exemplo prático**: Podemos entregar nossa vida nas mãos de Deus — Ele é confiável. A entrega final é um ato de fé, não de derrota.
 
