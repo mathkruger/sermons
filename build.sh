@@ -13,7 +13,7 @@ for sermon_dir in src/*/; do
 
   if [ -f "$sermon_dir/sermao-texto.md" ]; then
     mkdir -p "dist/$sermon_name"
-    cat "$sermon_dir/sermao-texto.md" | npx md-to-pdf > "dist/$sermon_name/sermao-texto.pdf"
+    node scripts/md-to-pdf.mjs "$sermon_dir/sermao-texto.md" "dist/$sermon_name/sermao-texto.pdf"
   fi
 done
 

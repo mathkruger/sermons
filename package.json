@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/mathkruger/sermons#readme",
   "dependencies": {
-    "@marp-team/marp-cli": "^4.4.1"
+    "@marp-team/marp-cli": "^4.4.1",
+    "playwright": "^1.61.1"
   }
 }
