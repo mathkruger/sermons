@@ -199,7 +199,7 @@ Foram as palavras mais profundas já ditas — um sermão vivo, pregado no madei
 
 - Perdão — Ele perdoa sem condições
 - Salvação — Ele salva sem mérito
-- Cuidado — Ele cuida sem descuido
+- Cuidado — Ele cuida das nossas necessidades
 - Abandono — Ele sofre por nós
 - Sede — Ele entende nossa dor
 - Vitória — Ele venceu o mal

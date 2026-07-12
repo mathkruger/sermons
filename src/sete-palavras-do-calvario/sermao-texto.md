@@ -140,7 +140,7 @@ As sete palavras da cruz revelam o **caráter completo de Deus**:
 
 1. **Perdão** — Ele perdoa sem condições
 2. **Salvação** — Ele salva sem mérito
-3. **Cuidado** — Ele cuida sem descuido
+3. **Cuidado** — Ele cuida das nossas necessidades
 4. **Abandono** — Ele sofre por nós
 5. **Sede** — Ele entende nossa dor
 6. **Vitória** — Ele venceu o mal
