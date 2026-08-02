@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "./build.sh"
+    "build": "./build.sh",
+    "serve":  "npx serve dist/"
   },
   "repository": {
     "type": "git",
