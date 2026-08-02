@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sermões</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #1e293b;
+      --card-hover: #27364f;
+      --text: #f1f5f9;
+      --muted: #94a3b8;
+      --accent: #38bdf8;
+      --accent-dark: #0284c7;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      padding: 3rem 2rem;
+    }
+
+    header {
+      max-width: 1100px;
+      margin: 0 auto 2.5rem;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    .grid {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 12px;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      transition: transform 0.15s ease, background 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      background: var(--card-hover);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    }
+
+    .card h2 {
+      font-size: 1.125rem;
+      font-weight: 600;
+      line-height: 1.4;
+      flex-grow: 1;
+    }
+
+    .card .actions {
+      display: flex;
+      gap: 0.75rem;
+      margin-top: auto;
+    }
+
+    .btn {
+      flex: 1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      padding: 0.6rem 0.9rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      transition: background 0.15s ease, transform 0.1s ease;
+    }
+
+    .btn:active { transform: scale(0.97); }
+
+    .btn-presentation {
+      background: var(--accent);
+      color: #082f49;
+    }
+
+    .btn-presentation:hover { background: #7dd3fc; }
+
+    .btn-pdf {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .btn-pdf:hover { background: rgba(255, 255, 255, 0.08); }
+
+    .empty {
+      max-width: 1100px;
+      margin: 3rem auto;
+      text-align: center;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Sermões</h1>
+    <p>Apresentações e documentos em PDF</p>
+  </header>
+
+  <main class="grid" id="grid"></main>
+  <div class="empty" id="empty" hidden>Nenhum sermão encontrado.</div>
+
+  <script>
+    const grid = document.getElementById("grid");
+    const empty = document.getElementById("empty");
+
+    fetch("sermons.json")
+      .then((res) => {
+        if (!res.ok) throw new Error("Falha ao carregar sermons.json");
+        return res.json();
+      })
+      .then((sermons) => {
+        if (!sermons.length) {
+          empty.hidden = false;
+          return;
+        }
+
+        for (const sermon of sermons) {
+          const card = document.createElement("article");
+          card.className = "card";
+
+          const title = document.createElement("h2");
+          title.textContent = sermon.title;
+
+          const actions = document.createElement("div");
+          actions.className = "actions";
+
+          if (sermon.presentation) {
+            const pres = document.createElement("a");
+            pres.className = "btn btn-presentation";
+            pres.href = `${sermon.id}/`;
+            pres.textContent = "Apresentação";
+            actions.appendChild(pres);
+          }
+
+          if (sermon.pdf) {
+            const pdf = document.createElement("a");
+            pdf.className = "btn btn-pdf";
+            pdf.href = `${sermon.id}/sermao-texto.pdf`;
+            pdf.target = "_blank";
+            pdf.rel = "noopener";
+            pdf.textContent = "PDF";
+            actions.appendChild(pdf);
+          }
+
+          card.appendChild(title);
+          card.appendChild(actions);
+          grid.appendChild(card);
+        }
+      })
+      .catch((err) => {
+        console.error(err);
+        empty.textContent = "Erro ao carregar sermões.";
+        empty.hidden = false;
+      });
+  </script>
+</body>
+</html>

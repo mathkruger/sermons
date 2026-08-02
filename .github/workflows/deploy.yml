@@ -3,6 +3,12 @@ name: Build and Deploy
 on:
   push:
     branches: [main]
+  workflow_dispatch:
+    inputs:
+      max_retries:
+        description: "Número máximo de tentativas na conversão de PDF (MD_TO_PDF_MAX_RETRIES)"
+        required: false
+        default: "3"
 
 permissions:
   contents: read
@@ -28,6 +34,8 @@ jobs:
       - run: npx playwright install chromium
 
       - run: npm run build
+        env:
+          MD_TO_PDF_MAX_RETRIES: ${{ inputs.max_retries || '3' }}
 
       - uses: actions/configure-pages@v5
 

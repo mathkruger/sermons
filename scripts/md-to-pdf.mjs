@@ -6,6 +6,10 @@ import { dirname } from "node:path";
 
 const URL = "https://markdowntoword.io/tools/markdown-to-pdf";
 
+const MAX_RETRIES = Number.parseInt(process.env.MD_TO_PDF_MAX_RETRIES ?? "3", 10);
+
+const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
 async function convertMdToPdf(inputPath, outputPath) {
   const markdown = await readFile(inputPath, "utf-8");
 
@@ -57,7 +61,31 @@ if (!inputArg || !outputArg) {
   process.exit(1);
 }
 
-convertMdToPdf(inputArg, outputArg).catch((err) => {
+async function main() {
+  let lastError;
+
+  for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
+    try {
+      await convertMdToPdf(inputArg, outputArg);
+      return;
+    } catch (err) {
+      lastError = err;
+      console.error(
+        `Tentativa ${attempt}/${MAX_RETRIES} falhou: ${err.message}`
+      );
+      if (attempt < MAX_RETRIES) {
+        const delay = 3000 * attempt;
+        console.log(`Aguardando ${delay}ms antes da próxima tentativa...`);
+        await sleep(delay);
+      }
+    }
+  }
+
+  console.error(`Falha após ${MAX_RETRIES} tentativas.`);
+  throw lastError;
+}
+
+main().catch((err) => {
   console.error("Erro na conversão:", err.message);
   process.exit(1);
 });
