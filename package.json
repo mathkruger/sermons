@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "./build.sh",
+    "build:full": "./build.sh --force",
     "serve":  "npx serve dist/"
   },
   "repository": {

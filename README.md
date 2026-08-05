@@ -31,9 +31,17 @@ npm run build
 
 O HTML gerado estará em `dist/`.
 
+O build é **incremental**: apenas os sermões cujos arquivos mudaram são reconstruídos (o estado fica em `dist/.build-state.json`). Para reconstruir tudo:
+
+```bash
+npm run build:full
+```
+
 ## Deploy
 
 O envio para `main` aciona o GitHub Actions que faz build e publica via GitHub Pages.
+
+No GitHub Actions o build também é incremental: o `dist/` anterior é restaurado de cache e apenas os sermões alterados são reconstruídos antes do deploy. Se o cache expirar, um build completo é feito automaticamente.
 
 ## Gerar novos sermões com opencode
 
